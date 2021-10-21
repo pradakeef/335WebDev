@@ -1,0 +1,189 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>SHIT</title>
+    <link rel="icon" href = "http://localhost:5000/logo-192x192.png">
+    <link rel="stylesheet" href="aman290.css">
+    <script type="text/javascript" src ="aman290.js"></script>
+        
+</head>
+<body>
+<header>
+    
+    
+    <h3>Southern Hemisphere Insitute Of Technology</h3>
+
+    <table class = "nav">
+        
+        <img src = "http://localhost:5000/logo-192x192.png" class = "logo" alt = "headimg">
+        <tr class = "navButtons">
+            <td onclick = "showHome();">🏠 Home</td>
+        </tr>
+
+        <tr class = "navButtons" style="cursor: pointer;">
+            <td onclick = "showStaff();">📰 Staff</td>
+        </tr>
+
+        <tr class = "navButtons" style="cursor: pointer;">
+            
+            <td onclick = "showShop();">🛒 Institute Shop</td>
+        </tr>
+
+        <tr class = "navButtons" style="cursor: pointer;">
+            <td onclick = "showRegister();">👩 User Registration</td>
+        </tr>
+
+        <tr class = "navButtons" style="cursor: pointer;">
+            <td onclick = "showGB();">📖 Guest Book</td>
+        </tr>
+  
+        <tr class = "loggedSign">
+            <td id = "loggedIn" style ="display: None">
+                (Logged in)
+            </td>
+            <td id = "loggedOut" >
+                (Logged Out)
+            </td>
+        </tr>
+
+    </table>
+    
+    
+    
+           
+           
+
+
+        
+
+</header>
+    
+    <div id = "Home" class = "box">
+        <div id = "homeInfo">
+           <h1 >Welcome To S.H.I.T</h1>
+           <br>
+        <h3 style = "color:#131921">Here at S.H.I.T were strive to develop the world's future by enhacing the education we provide in measurement to the modern world.</h3>
+        <br>
+        <h4>Founded by the Russo brothers who then established the instiutute at the end of 2020 has caught ears around the world. S.H.I.T is currently ranked #420 in the world rank of universities! </h5>
+        <br>
+            <h3 style = "color:#131921">New Students have come to love and enjoy the new S.H.I.T environment. Loacted at the bottom of Auckland S.H.I.T has shown to be the hub of Auckland student life! </h4>
+        <p></p>
+
+        </div>
+      
+        
+        <img src = "http://localhost:5000/api/GetLogo" class = "bigLogo" style="width: 50%; margin-left: 25%"></img>
+        <div class = footer>
+            aman290 &copy; 2021
+        </div>
+    </div>
+    
+    <div id="Staff" class = "box">
+        
+        <h1>Contact Our S.H.I.T Staff!</h1>
+        <br>
+        <table id = "staffTable">
+            
+        </table>
+        <div class = footer>
+            aman290 &copy; 2021
+        </div>
+        
+    </div>
+    
+    <div id="Shop"  class = "box">
+        <h1>Search the S.H.I.T Insitition Shop:</h1>
+        <br>
+        <input type = "text" onkeyup = "getProductByName()" id = "search"> 🔍
+        <br>
+        <br>
+        <table id = "productsTable">
+            
+        </table>
+        <div class = footer>
+            aman290 &copy; 2021
+        </div>
+        
+    </div>
+    
+    <div id="Register"class = "box">
+        <br>
+        <div id ="UserLogin" style = "display: none;">
+            <h1>Log Into Your S.H.I.T Account!</h1>
+            <br>
+            <h4>Username:</h4><input type = "text" placeholder="Username" id = "username">
+                <br>
+                <br>
+                <h4>Password:</h4><input type = "password" placeholder="Password"  id = "password">
+                <button  onclick = "getAuth()">Login</button>
+                <button onclick = "logOut()">Logout</button>
+                <br>
+                <br>
+                <u onclick = "dontLogin()" class = "regSign">Dont Have A Login Yet? Register Now</u>
+                <br>
+                <br>
+                <h4 style = "padding: 5px; color: yellow; background-color: #131921;" id = "userLoginYes"></h4>
+        </div>
+        
+        
+        <div id ="UserRegister">
+            
+            <h1>Register A New S.H.I.T Account Now!</h1>
+            <br>
+        <h4>Username:</h4><input type = "text" placeholder="Username" id = "newUser">
+        <br>
+        <br>
+        <h4>Password:</h4><input type = "password" placeholder="Password" id = "newPass">
+        <br>
+        <br>
+        <h4>Address:</h4><input type = "text" placeholder="Optional: Address" id = "address">
+        
+        <button type ="reset" onclick = "addNewUser()">Register</button>
+        <br>
+        <br>
+        <u onclick = "alreadyLogin()" class = "regSign">Have A Login Already? Login In Now!</u>
+        <br>
+        <br>
+        <h4 style = "padding: 5px; color: yellow; background-color: #131921;" id = "userSuccess"></h4>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class = footer >
+            aman290 &copy; 2021
+        </div>
+        
+    </div>
+    
+    <div id="GuestBook"class = "box">
+        <h1>Post A Comment!</h1>
+        <br>
+        
+       <h4>Name: </h4> <input type = "text" placeholder="Your Name" id = "commentName">
+       <br>
+       <br>
+        <h4>Comment:</h4>
+        <textarea type = "text" id = "comment" placeholder="Write a Comment"></textarea>
+        <br>
+        <br>
+        <button onclick = "addComment()">Submit</button>
+        <br>
+        <br>
+        <h1>Previous Comments:</h1>
+        <iframe src = "http://localhost:5000/api/GetComments" class = "comments" ></iframe>
+        <div class = footer>
+            aman290 &copy; 2021
+        </div>
+    </div>
+
+    
+
+    
+    
+</body>
+
+
+</html>
